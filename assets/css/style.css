@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #eee;
+	font-family: 'Quicksand', 'Sans-serif';
+}
+
+nav{
+	padding: 15px;
+	border-bottom: 5px solid #6e2c8f;
+	background-color: #fff;
+}
+
+.nav-title{
+	font-size: 2em;
+}
+
+.nav-title::first-letter{
+	color: orange;
+}
+
+main{
+	min-height: calc(100vh - 150px);
+}
+
+.flex-container{
+	display: flex;
+	padding: 8px;
+}
+
+.card{
+	background-color: #fff;
+	border-left: 20px solid #fbb712;
+	box-shadow: 5px 3px 5px 0 rgba(0, 0, 0, 0.2) ;
+	padding: 20px;
+	margin: 10px;
+	max-height: 100%;
+	transition: box-shadow 0.5s;
+	border-radius: 3px;
+}
+
+.board-column{
+	columns: 4 200px;
+	column-gap: 1rem;
+}
+
+.note{
+	width: 25%;
+	word-wrap: break-word;
+	text-decoration: none;
+	color: #444;
+	padding: 20px;
+	margin: 0 1rem 1rem 0;
+	display: inline-block;
+	width: 100%;
+	transition: box-shadow 0.5s;
+}
+
+.note:nth-child(1n){
+	background-color: #6dcef4;
+}
+
+.note:nth-child(2n){
+	background-color:  #fdd48d;
+}
+
+.note:nth-child(3n){
+	background-color: #f8ae80;
+}
+
+.text-muted{
+	font-weight: 50;
+	color: #888;
+}
+
+.card:hover{
+	box-shadow: 5px 3px 5px 3px rgba(0, 0, 0, 0.2) ;
+}
+
+.profile{
+	height: 400px;
+}
+
+
+
+.profile figure{
+	margin: 30px 0;
+}
+
+.profile-img{
+	width: 180px;
+	border-radius: 100px;
+}
+
+.profile-text{
+	margin-top: 10px;
+	color: #444;
+}
+
+
+.profile-text p:nth-child(2){
+	font-size: 18px;
+	margin: 10px 0; 
+}
+
+.profile-text p a{
+	margin-right: 5px;
+	font-size: 20px;
+	color: #444;
+}
+
+article{
+	padding: 20px;
+	flex-basis: 75%;
+}
+
+aside{
+	flex-basis: 25%;
+}
+
+footer{
+	text-align: center;
+	background-color: #6e2c8f;
+	color: white;
+	bottom: 0;
+	width: 100%;
+	padding: 20px;
+}
+
+.board-title{
+	padding: 8px;
+	margin-bottom: 10px;
+	overflow: auto;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.board-title h2{
+	color: #333;
+}
+
+.float-right{
+	color: rgba(0, 0, 0, 0.5);
+	float: right;
+	margin-left: 10px;
+	margin-top: -15px;
+	font-size: 2rem;
+}
+
+.tools{
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	margin: 10px;
+	position: fixed;
+	top: 80%;
+	left: 90%;
+	font-weight: bold;
+	color: white;
+	border-radius: 50px;
+	line-height: 58px;
+	font-size: 20px;
+	cursor: pointer;
+	background-color: #f16422;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.hidden{
+	display: none;
+}
+
+.write{
+	background-color: #f16422;
+	top: 72%;
+	left: 83%;
+}
+
+.clear{
+	background-color: #eb1c24;
+	top: 87%;
+	left: 83%;
+}
+
+.active{
+	background-color: #fff;
+	color: black;
+}
+
+.modal-write{
+	position: fixed;
+	z-index: 1;
+	padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.1);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  overflow: auto;
+  border-top: 5px solid orange;
+  width: 80%;
+  transition: 0.5s ease-in;
+}
+
+.modal-write p{
+	margin-top: 10px;
+}
+
+input[type="text"]{
+	width: 100%;
+	padding: 8px;
+	border: none;
+	border-bottom: 1px solid #444;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+textarea{
+	width: 100%;
+	padding: 8px;
+	border: none;
+	border-bottom: 1px solid #444;
+	font-size: 15px;
+}
+
+p button{
+	padding: 8px;
+	font-size: 15px;
+	float: right;
+	margin: 5px;
+	cursor: pointer;
+	background: none;
+	border: 1px solid orange;
+}
+
+p button:hover{
+	background-color: orange;
+	color: white;
+}
+
+@media screen and (max-width: 1000px){
+	.flex-container{
+		flex-direction: column;
+	}
+	
+	.card{
+		flex-basis: 100%;
+		max-height: 100%;
+	}
+	
+	.profile figure{
+	}
+	
+	.tools{
+		left: 75%;
+	}
+	
+	.write{
+		left: 68%;
+	}
+	
+	.clear{
+		left: 68%;
+	}
+}
+
+@media screen and (max-width: 500px){	
+	.write{
+		left: 58%;
+	}
+	
+	.clear{
+		left: 58%;
+	}
+}

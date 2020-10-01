@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NoteApp</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<script src="https://kit.fontawesome.com/a228d0b067.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<h1 class="nav-title">Noted!</h1>
+				<p>Keep tracks your little things</p>
+			</nav>
+		</header>
+		
+		<main>
+			<article class="modal-write hidden" id="modal-write">
+				<div class="modal-content">
+					<header>
+						<div class="modal-head">
+							<h2>Take a Note!</h2>
+						</div>
+						<p><input type="text" maxlength="30" id="title" placeholder="Some title"></p>
+						<p><textarea rows="10" maxlength="150" id="content" placeholder="What do you think?"></textarea></p>
+						<p><button type="button" id="closebtn">Cancel</button> <button type="button" id="post">Post</button></p>
+					</header>
+				</div>
+			</article>
+			
+			<div class="flex-container">
+				<article class="card">
+					<div class="board-title">
+						<h2>Note Board</h2>
+						
+					</div>
+					
+					<div class="board"></div>
+				</article>
+				
+				<aside class="card profile">
+					<center>
+						<figure>
+							<img class="profile-img" src="assets/img/profile-img.jpg">
+							
+							<figcaption class="profile-text">
+								<h2>Galang Buana</h2>
+								<p class="text-muted">Web Programmer</p>
+								<p>
+									<a href="https://web.facebook.com/rudeus.greyrat.73" target="_blank"><i class="fab fa-facebook"></i></a>
+									<a href="https://github.com/galangbuana26" target="_blank"><i class="fa fa-github"></i></a>
+								</p>
+							</figcaption>
+						</figure>
+					</center>
+				</aside>
+			</div>
+			
+			<div class="tools" id="tools">
+				+
+			</div>
+			
+			<div class="tools write hidden" id="tools">
+				<i class="fa fa-pencil"></i>
+			</div>
+			
+			<div class="tools clear hidden">
+				<i class="fa fa-trash"></i>
+			</div>
+			
+		</main>
+		<footer>
+			NoteApp &copy; Galang Buana 2020
+		</footer>
+		
+		<script src="assets/js/noteapp.js"></script>
+		<script src="assets/js/storage.js"></script>
+	</body>
+</html>
+
